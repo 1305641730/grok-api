@@ -23,7 +23,7 @@ async function handleWebSocket(req: Request): Promise<Response> {
   const { socket: clientWs, response } = Deno.upgradeWebSocket(req);
 
   const url = new URL(req.url);
-  const targetUrl = `wss://grok.com${url.pathname}${url.search}`;
+  const targetUrl = `wss://api.x.ai${url.pathname}${url.search}`;
 
   console.log('Target URL:', targetUrl);
 
@@ -133,7 +133,7 @@ const handler = async (req: Request): Promise<Response> => {
           //   {
           //       if(text.includes("streamingImageGenerationResponse"))
           //       {
-          //           text = text.replaceAll('users/','https://assets.grok.com/users/');
+          //           text = text.replaceAll('users/','https://assets.api.x.ai/users/');
           //       }
           //   }
 
