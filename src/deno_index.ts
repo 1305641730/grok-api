@@ -1,7 +1,7 @@
 import { serve } from "https://deno.land/std@0.202.0/http/server.ts";
 
-const TARGET_URL = "https://grok.com";
-const ORIGIN_DOMAIN = "grok.com"; // 注意：此处应仅为域名，不含协议
+const TARGET_URL = "https://api.x.ai";
+const ORIGIN_DOMAIN = "api.x.ai"; // 注意：此处应仅为域名，不含协议
 
 const AUTH_USERNAME = Deno.env.get("AUTH_USERNAME");
 const AUTH_PASSWORD = Deno.env.get("AUTH_PASSWORD");
