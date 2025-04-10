@@ -97,8 +97,8 @@ const handler = async (req: Request): Promise<Response> => {
   const headers = new Headers(req.headers);
   headers.set("Host", targetUrl.host);
   headers.delete("Referer");
-  headers.delete("Cookie");
-  headers.delete("Authorization"); // 删除验证头，不转发到目标服务器
+  // headers.delete("Cookie");
+  // headers.delete("Authorization"); // 删除验证头，不转发到目标服务器
   headers.set("cookie", COOKIE || '');
 
   try {
